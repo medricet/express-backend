@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "dist/bundle.js",
+  "main": "dist/main.js",
   "scripts": {
     "build": "npm install && rollup -c",
     "start": "npm run build && node .",
