@@ -5,9 +5,9 @@
   "type": "module",
   "main": "dist/main.js",
   "scripts": {
-    "build": "npm install && rollup -c",
-    "start": "npm run build && node .",
-    "clean": "rm -r dist"
+    "build": "rollup -c",
+    "start": "node .",
+    "clean": "rm -r dist node_modules 2> /dev/null"
   },
   "author": "medricet",
   "license": "GPL-3.0",
