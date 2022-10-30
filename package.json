@@ -6,7 +6,7 @@
   "main": "dist/bundle.js",
   "scripts": {
     "build": "npm install && rollup -c",
-    "start": "node .",
+    "start": "npm run build && node .",
     "clean": "rm -r dist"
   },
   "author": "medricet",
