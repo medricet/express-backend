@@ -5,7 +5,7 @@
   "type": "module",
   "main": "dist/bundle.js",
   "scripts": {
-    "build": "rollup -c",
+    "build": "npm install && rollup -c",
     "start": "node .",
     "clean": "rm -r dist"
   },
