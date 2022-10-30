@@ -4,9 +4,8 @@
   "description": "",
   "main": "dist/bundle.js",
   "scripts": {
-    "build": "rollup src/main.js --file dist/bundle.js --format cjs",
-    "start": "npm run build && node .",
-    "start-all": "npm install && npm run start",
+    "build": "npm install && rollup src/main.js --file dist/bundle.js --format cjs",
+    "start": "node .",
     "clean": "rm -r dist"
   },
   "author": "medricet",
