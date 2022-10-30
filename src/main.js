@@ -10,6 +10,12 @@ app.get('/', (req, res) => {
   res.send({});
 });
 
+app.get("/greet/:name", (req, res) => {
+  res.send({
+    greeting: "Hello, " + req.params.name + "!"
+  });
+});
+
 app.get('/course/:course', async (req, res) => {
   let course = req.params.course;
   
