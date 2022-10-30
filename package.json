@@ -2,9 +2,10 @@
   "name": "express-backend",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "dist/bundle.js",
   "scripts": {
-    "build": "npm install && rollup src/main.js --file dist/bundle.js --format cjs",
+    "build": "npm install && rollup src/main.js --file dist/bundle.js --format esm",
     "start": "node .",
     "clean": "rm -r dist"
   },
@@ -12,7 +13,8 @@
   "license": "GPL-3.0",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "node-fetch": "^3.2.10"
   },
   "devDependencies": {
     "rollup": "^3.2.3"
