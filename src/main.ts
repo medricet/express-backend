@@ -1,23 +1,23 @@
 import cors from 'cors';
-import express from 'express';
+import * as express from 'express';
 import fetch from 'node-fetch';
 
-const app = express();
+const app = express.call(null);
 const port = 8000;
 
 app.use(cors());
 
-app.get('/', (req, res) => {
+app.get('/', (req: express.Request, res: express.Response) => {
   res.send({});
 });
 
-app.get("/greet/:name", (req, res) => {
+app.get("/greet/:name", (req: express.Request, res: express.Response) => {
   res.send({
     greeting: "Hello, " + req.params.name + "!"
   });
 });
 
-app.get('/course/:course', async (req, res) => {
+app.get('/course/:course', async (req: express.Request, res: express.Response) => {
   let course = req.params.course;
   
   if (course.match(/^[a-zA-Z0-9]+$/)) {
@@ -31,5 +31,5 @@ app.get('/course/:course', async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log('Example app listening on ' + port);
+  console.log('Listening on ' + port);
 });
