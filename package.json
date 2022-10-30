@@ -6,6 +6,7 @@
   "scripts": {
     "build": "rollup src/main.js --file dist/bundle.js --format cjs",
     "start": "npm run build && node .",
+    "start-all": "npm install && npm run start",
     "clean": "rm -r dist"
   },
   "author": "medricet",
